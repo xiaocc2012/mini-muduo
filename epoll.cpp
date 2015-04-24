@@ -57,7 +57,7 @@ int main()
             int fd = ev->data.fd;
             if (fd == sfd)
             {
-                if (ev->events | EPOLLIN)
+                if (ev->events & EPOLLIN)
                 {
                     // main socket fd
                     struct sockaddr_in client_addr;
